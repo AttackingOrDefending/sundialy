@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sundialy"
+version = "0.0.1"
+author = "AttackingOrDefending"
+description = "A sundial library for python"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["sundial", "sundials", "analemmatic", "sun", "astronomy"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries",
+    "Typing :: Typed"
+]
+packages = [
+    { include = "py.typed" },
+]
+package-data = [
+    { include = "sundialy" },
+    { include = "sundialy.tools" },
+]
+dependencies = [
+    "Shapely>=1.8.0",
+    "matplotlib>=3.5.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/AttackingOrDefending/sundialy"
+"Documentation" = "https://sundialy.readthedocs.io"
+"Bug Tracker" = "https://github.com/AttackingOrDefending/sundialy/issues"

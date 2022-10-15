@@ -1,0 +1,20 @@
+name: Mypy
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Mypy
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install shapely matplotlib
+        pip install mypy
+    - name: Mypy
+      run:  mypy --strict sundialy

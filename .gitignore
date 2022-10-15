@@ -1,0 +1,11 @@
+.venv
+.idea
+.gitattributes
+
+.mypy_cache
+.pytest_cache
+test_sundialy/.pytest_cache
+
+__pycache__
+sundialy/__pycache__
+sundialy/tools/__pycache__
