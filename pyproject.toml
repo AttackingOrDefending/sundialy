@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "sundialy"
 version = "0.0.1"
-author = "AttackingOrDefending"
+author = "Ioannis Pantidis"
 description = "A sundial library for python"
 readme = "README.md"
 requires-python = ">=3.7"
