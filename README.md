@@ -34,7 +34,10 @@ sundial.create_sundial("sundial.jpg")
 ![Sundial](images/sundial.jpg)
 
 * Use the tools
-
+  - SPA (Solar Position Algorithm)
+  - SAMPA (Solar and Moon Position Algorithm)
+  - SOLPOS (Solar Position and Intensity)
+  - Bird (Bird Clear Sky Model)
 ```python
 from sundialy.tools import SPA
 
