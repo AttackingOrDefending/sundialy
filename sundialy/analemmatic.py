@@ -2,8 +2,8 @@ from typing import Union, Iterable, Tuple, Optional, Dict, List
 import datetime
 from .tools import SPA
 from shapely import affinity, geometry  # type: ignore
-from matplotlib.patches import Ellipse  # type: ignore
-import matplotlib.pyplot as plt  # type: ignore
+from matplotlib.patches import Ellipse
+import matplotlib.pyplot as plt
 import math
 
 NUMBER_TYPE = Union[int, float]
@@ -209,7 +209,7 @@ class Horizontal:
             zorder -= 1
             ax.plot([x_ans], [y_ans], color='k', marker='.', zorder=zorder, linewidth=1)
             zorder -= 1
-            ax.text(x_ans + add_to_x(hour) * 0.02 * self.width, y_ans + add_to_y(hour) * 0.02 * self.width, hour,
+            ax.text(x_ans + add_to_x(hour) * 0.02 * self.width, y_ans + add_to_y(hour) * 0.02 * self.width, str(hour),
                     {'size': 4}, zorder=zorder)
 
         right = -1.
