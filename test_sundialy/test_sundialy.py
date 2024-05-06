@@ -17,7 +17,7 @@ def round_to_3_decimals(results):
 
 
 def test_sundial():
-    sundial = AnalemmaticHorizontal(latitude=34, longitude=-118, timezone=-7, show=False)
+    sundial = AnalemmaticHorizontal(latitude=34, longitude=-118, timezone=-7, show=False, years=2022)
     sundial.create_sundial()
     assert round_to_3_decimals(sundial.height) == 2.796
     assert round_to_3_decimals(sundial.gnomon_movement) == {'Jan 1': -0.88, 'Feb 1': -0.637, 'Mar 1': -0.275, 'Apr 1': 0.165, 'May 1': 0.559, 'Jun 1': 0.84, 'Jun 21': 0.898, 'Jul 1': 0.884, 'Aug 1': 0.673, 'Sep 1': 0.301, 'Oct 1': -0.116, 'Nov 1': -0.534, 'Dec 1': -0.829, 'Dec 21': -0.898}
@@ -31,7 +31,7 @@ def test_sundial():
     assert round_to_3_decimals(sundial.hour_locations) == {0: (157.566, 0.562, -1.361), 1: (136.443, 1.174, -1.234), 2: (120.949, 1.703, -1.021), 3: (109.261, 2.118, -0.74), 4: (99.702, 2.391, -0.409), 5: (91.119, 2.496, -0.049), 6: (82.644, 2.433, 0.314), 7: (73.441, 2.207, 0.656), 8: (62.46, 1.826, 0.952), 9: (48.175, 1.323, 1.184), 10: (28.667, 0.731, 1.337), 11: (3.573, 0.087, 1.396), 12: (-22.434, -0.562, 1.361), 13: (-43.557, -1.174, 1.234), 14: (-59.051, -1.703, 1.021), 15: (-70.739, -2.118, 0.74), 16: (-80.298, -2.391, 0.409), 17: (-88.881, -2.496, 0.049), 18: (-97.356, -2.433, -0.314), 19: (-106.559, -2.207, -0.656), 20: (-117.54, -1.826, -0.952), 21: (-131.825, -1.323, -1.184), 22: (-151.333, -0.731, -1.337), 23: (-176.427, -0.087, -1.396)}
     assert round_to_3_decimals(sundial.significant_eot) == {'Jan 1': -3.187, 'Feb 1': -13.433, 'Feb 11': -14.182, 'Mar 1': -12.378, 'Apr 1': -3.977, 'May 1': 2.852, 'May 14': 3.65, 'Jun 1': 2.208, 'Jul 1': -3.82, 'Jul 26': -6.56, 'Aug 1': -6.386, 'Sep 1': -0.141, 'Oct 1': 10.211, 'Nov 1': 16.417, 'Nov 3': 16.453, 'Dec 1': 11.157}
 
-    sundial = AnalemmaticHorizontal(latitude=0, longitude=0, correct_for_longitude=True, show=False)
+    sundial = AnalemmaticHorizontal(latitude=0, longitude=0, correct_for_longitude=True, show=False, years=2022)
     sundial.create_sundial("sundial.jpg", "corrections.jpg")
     assert round_to_3_decimals(sundial.height) == 0.
     assert round_to_3_decimals(sundial.gnomon_movement) == {'Jan 1': -1.062, 'Feb 1': -0.772, 'Mar 1': -0.337, 'Apr 1': 0.194, 'May 1': 0.67, 'Jun 1': 1.011, 'Jun 21': 1.084, 'Jul 1': 1.067, 'Aug 1': 0.816, 'Sep 1': 0.367, 'Oct 1': -0.135, 'Nov 1': -0.64, 'Dec 1': -0.998, 'Dec 21': -1.084}
