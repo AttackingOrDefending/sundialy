@@ -6,7 +6,7 @@
 [![codecov](https://codecov.io/gh/AttackingOrDefending/sundialy/branch/main/graph/badge.svg)](https://codecov.io/gh/AttackingOrDefending/sundialy)
 [![Docs](https://readthedocs.org/projects/sundialy/badge/?version=latest)](https://sundialy.readthedocs.io/en/latest/?badge=latest)
 
-A sundial library for python.
+A sundial library for python. Create an analemmatic sundial in less than 5 minutes.
 
 ## Installing
 
