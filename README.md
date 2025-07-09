@@ -41,7 +41,7 @@ sundial.create_sundial("sundial.jpg")
 ```python
 from sundialy.tools import SPA
 
-spa_results = SPA(2020, 12, 31, 23, 59, 59, 0, 0, 0, 0, pressure=1000, temperature=10, omega=0, gamma=0)
+spa_results = SPA(2025, 12, 31, 23, 59, 59, 0, 0, 0, 0, pressure=1000, temperature=10, omega=0, gamma=0)
 ```
 
 
